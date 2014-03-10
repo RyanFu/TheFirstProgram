@@ -1,0 +1,660 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		17053CCB18CD8BEF006228ED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17053CCA18CD8BEF006228ED /* Foundation.framework */; };
+		17053CCD18CD8BEF006228ED /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17053CCC18CD8BEF006228ED /* CoreGraphics.framework */; };
+		17053CCF18CD8BEF006228ED /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17053CCE18CD8BEF006228ED /* UIKit.framework */; };
+		17053CD518CD8BEF006228ED /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 17053CD318CD8BEF006228ED /* InfoPlist.strings */; };
+		17053CD718CD8BEF006228ED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 17053CD618CD8BEF006228ED /* main.m */; };
+		17053CDB18CD8BEF006228ED /* QYAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 17053CDA18CD8BEF006228ED /* QYAppDelegate.m */; };
+		17053CDD18CD8BEF006228ED /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17053CDC18CD8BEF006228ED /* Images.xcassets */; };
+		17053CE418CD8BEF006228ED /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17053CE318CD8BEF006228ED /* XCTest.framework */; };
+		17053CE518CD8BEF006228ED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17053CCA18CD8BEF006228ED /* Foundation.framework */; };
+		17053CE618CD8BEF006228ED /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17053CCE18CD8BEF006228ED /* UIKit.framework */; };
+		17053CEE18CD8BEF006228ED /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 17053CEC18CD8BEF006228ED /* InfoPlist.strings */; };
+		17053CF018CD8BEF006228ED /* QYMovieScannerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 17053CEF18CD8BEF006228ED /* QYMovieScannerTests.m */; };
+		17053D1418CD8D15006228ED /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 17053D0118CD8D15006228ED /* MKAnnotationView+WebCache.m */; };
+		17053D1518CD8D15006228ED /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 17053D0318CD8D15006228ED /* SDImageCache.m */; };
+		17053D1618CD8D15006228ED /* SDWebImageDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 17053D0718CD8D15006228ED /* SDWebImageDecoder.m */; };
+		17053D1718CD8D15006228ED /* SDWebImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 17053D0918CD8D15006228ED /* SDWebImageDownloader.m */; };
+		17053D1818CD8D15006228ED /* SDWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 17053D0C18CD8D15006228ED /* SDWebImageManager.m */; };
+		17053D1918CD8D15006228ED /* SDWebImagePrefetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 17053D0F18CD8D15006228ED /* SDWebImagePrefetcher.m */; };
+		17053D1A18CD8D15006228ED /* UIButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 17053D1118CD8D15006228ED /* UIButton+WebCache.m */; };
+		17053D1B18CD8D15006228ED /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 17053D1318CD8D15006228ED /* UIImageView+WebCache.m */; };
+		17053D2A18CD8D39006228ED /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17053D2018CD8D39006228ED /* EGORefreshTableHeaderView.m */; };
+		17053D2B18CD8D39006228ED /* blackArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 17053D2218CD8D39006228ED /* blackArrow.png */; };
+		17053D2C18CD8D39006228ED /* blackArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 17053D2318CD8D39006228ED /* blackArrow@2x.png */; };
+		17053D2D18CD8D39006228ED /* blueArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 17053D2418CD8D39006228ED /* blueArrow.png */; };
+		17053D2E18CD8D39006228ED /* blueArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 17053D2518CD8D39006228ED /* blueArrow@2x.png */; };
+		17053D2F18CD8D39006228ED /* grayArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 17053D2618CD8D39006228ED /* grayArrow.png */; };
+		17053D3018CD8D39006228ED /* grayArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 17053D2718CD8D39006228ED /* grayArrow@2x.png */; };
+		17053D3118CD8D39006228ED /* whiteArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 17053D2818CD8D39006228ED /* whiteArrow.png */; };
+		17053D3218CD8D39006228ED /* whiteArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 17053D2918CD8D39006228ED /* whiteArrow@2x.png */; };
+		17053D3518CD8D60006228ED /* QYBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17053D3418CD8D60006228ED /* QYBaseView.m */; };
+		17053D3818CD8D75006228ED /* QYBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17053D3718CD8D75006228ED /* QYBaseViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		17053CE718CD8BEF006228ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 17053CBF18CD8BEF006228ED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 17053CC618CD8BEF006228ED;
+			remoteInfo = QYMovieScanner;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		17053CC718CD8BEF006228ED /* QYMovieScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QYMovieScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		17053CCA18CD8BEF006228ED /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		17053CCC18CD8BEF006228ED /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		17053CCE18CD8BEF006228ED /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		17053CD218CD8BEF006228ED /* QYMovieScanner-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "QYMovieScanner-Info.plist"; sourceTree = "<group>"; };
+		17053CD418CD8BEF006228ED /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		17053CD618CD8BEF006228ED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		17053CD818CD8BEF006228ED /* QYMovieScanner-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QYMovieScanner-Prefix.pch"; sourceTree = "<group>"; };
+		17053CD918CD8BEF006228ED /* QYAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QYAppDelegate.h; sourceTree = "<group>"; };
+		17053CDA18CD8BEF006228ED /* QYAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QYAppDelegate.m; sourceTree = "<group>"; };
+		17053CDC18CD8BEF006228ED /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		17053CE218CD8BEF006228ED /* QYMovieScannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QYMovieScannerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		17053CE318CD8BEF006228ED /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		17053CEB18CD8BEF006228ED /* QYMovieScannerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "QYMovieScannerTests-Info.plist"; sourceTree = "<group>"; };
+		17053CED18CD8BEF006228ED /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		17053CEF18CD8BEF006228ED /* QYMovieScannerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QYMovieScannerTests.m; sourceTree = "<group>"; };
+		17053D0018CD8D15006228ED /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
+		17053D0118CD8D15006228ED /* MKAnnotationView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKAnnotationView+WebCache.m"; sourceTree = "<group>"; };
+		17053D0218CD8D15006228ED /* SDImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDImageCache.h; sourceTree = "<group>"; };
+		17053D0318CD8D15006228ED /* SDImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDImageCache.m; sourceTree = "<group>"; };
+		17053D0418CD8D15006228ED /* SDImageCacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDImageCacheDelegate.h; sourceTree = "<group>"; };
+		17053D0518CD8D15006228ED /* SDWebImageCompat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageCompat.h; sourceTree = "<group>"; };
+		17053D0618CD8D15006228ED /* SDWebImageDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageDecoder.h; sourceTree = "<group>"; };
+		17053D0718CD8D15006228ED /* SDWebImageDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageDecoder.m; sourceTree = "<group>"; };
+		17053D0818CD8D15006228ED /* SDWebImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageDownloader.h; sourceTree = "<group>"; };
+		17053D0918CD8D15006228ED /* SDWebImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageDownloader.m; sourceTree = "<group>"; };
+		17053D0A18CD8D15006228ED /* SDWebImageDownloaderDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageDownloaderDelegate.h; sourceTree = "<group>"; };
+		17053D0B18CD8D15006228ED /* SDWebImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageManager.h; sourceTree = "<group>"; };
+		17053D0C18CD8D15006228ED /* SDWebImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageManager.m; sourceTree = "<group>"; };
+		17053D0D18CD8D15006228ED /* SDWebImageManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageManagerDelegate.h; sourceTree = "<group>"; };
+		17053D0E18CD8D15006228ED /* SDWebImagePrefetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImagePrefetcher.h; sourceTree = "<group>"; };
+		17053D0F18CD8D15006228ED /* SDWebImagePrefetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImagePrefetcher.m; sourceTree = "<group>"; };
+		17053D1018CD8D15006228ED /* UIButton+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+WebCache.h"; sourceTree = "<group>"; };
+		17053D1118CD8D15006228ED /* UIButton+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+WebCache.m"; sourceTree = "<group>"; };
+		17053D1218CD8D15006228ED /* UIImageView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebCache.h"; sourceTree = "<group>"; };
+		17053D1318CD8D15006228ED /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
+		17053D1F18CD8D39006228ED /* EGORefreshTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGORefreshTableHeaderView.h; sourceTree = "<group>"; };
+		17053D2018CD8D39006228ED /* EGORefreshTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGORefreshTableHeaderView.m; sourceTree = "<group>"; };
+		17053D2218CD8D39006228ED /* blackArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackArrow.png; sourceTree = "<group>"; };
+		17053D2318CD8D39006228ED /* blackArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blackArrow@2x.png"; sourceTree = "<group>"; };
+		17053D2418CD8D39006228ED /* blueArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueArrow.png; sourceTree = "<group>"; };
+		17053D2518CD8D39006228ED /* blueArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blueArrow@2x.png"; sourceTree = "<group>"; };
+		17053D2618CD8D39006228ED /* grayArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grayArrow.png; sourceTree = "<group>"; };
+		17053D2718CD8D39006228ED /* grayArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grayArrow@2x.png"; sourceTree = "<group>"; };
+		17053D2818CD8D39006228ED /* whiteArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteArrow.png; sourceTree = "<group>"; };
+		17053D2918CD8D39006228ED /* whiteArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whiteArrow@2x.png"; sourceTree = "<group>"; };
+		17053D3318CD8D60006228ED /* QYBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QYBaseView.h; sourceTree = "<group>"; };
+		17053D3418CD8D60006228ED /* QYBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QYBaseView.m; sourceTree = "<group>"; };
+		17053D3618CD8D75006228ED /* QYBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QYBaseViewController.h; sourceTree = "<group>"; };
+		17053D3718CD8D75006228ED /* QYBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QYBaseViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		17053CC418CD8BEF006228ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17053CCD18CD8BEF006228ED /* CoreGraphics.framework in Frameworks */,
+				17053CCF18CD8BEF006228ED /* UIKit.framework in Frameworks */,
+				17053CCB18CD8BEF006228ED /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17053CDF18CD8BEF006228ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17053CE418CD8BEF006228ED /* XCTest.framework in Frameworks */,
+				17053CE618CD8BEF006228ED /* UIKit.framework in Frameworks */,
+				17053CE518CD8BEF006228ED /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		17053CBE18CD8BEF006228ED = {
+			isa = PBXGroup;
+			children = (
+				17053CD018CD8BEF006228ED /* QYMovieScanner */,
+				17053CE918CD8BEF006228ED /* QYMovieScannerTests */,
+				17053CC918CD8BEF006228ED /* Frameworks */,
+				17053CC818CD8BEF006228ED /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		17053CC818CD8BEF006228ED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				17053CC718CD8BEF006228ED /* QYMovieScanner.app */,
+				17053CE218CD8BEF006228ED /* QYMovieScannerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		17053CC918CD8BEF006228ED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				17053CCA18CD8BEF006228ED /* Foundation.framework */,
+				17053CCC18CD8BEF006228ED /* CoreGraphics.framework */,
+				17053CCE18CD8BEF006228ED /* UIKit.framework */,
+				17053CE318CD8BEF006228ED /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		17053CD018CD8BEF006228ED /* QYMovieScanner */ = {
+			isa = PBXGroup;
+			children = (
+				17053CFC18CD8CC6006228ED /* utils */,
+				17053CFE18CD8CC6006228ED /* views */,
+				17053CFA18CD8CC6006228ED /* baseViews */,
+				17053CFB18CD8CC6006228ED /* modules */,
+				17053CFD18CD8CC6006228ED /* viewControllers */,
+				17053CD918CD8BEF006228ED /* QYAppDelegate.h */,
+				17053CDA18CD8BEF006228ED /* QYAppDelegate.m */,
+				17053CDC18CD8BEF006228ED /* Images.xcassets */,
+				17053CD118CD8BEF006228ED /* Supporting Files */,
+			);
+			path = QYMovieScanner;
+			sourceTree = "<group>";
+		};
+		17053CD118CD8BEF006228ED /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				17053CD218CD8BEF006228ED /* QYMovieScanner-Info.plist */,
+				17053CD318CD8BEF006228ED /* InfoPlist.strings */,
+				17053CD618CD8BEF006228ED /* main.m */,
+				17053CD818CD8BEF006228ED /* QYMovieScanner-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		17053CE918CD8BEF006228ED /* QYMovieScannerTests */ = {
+			isa = PBXGroup;
+			children = (
+				17053CEF18CD8BEF006228ED /* QYMovieScannerTests.m */,
+				17053CEA18CD8BEF006228ED /* Supporting Files */,
+			);
+			path = QYMovieScannerTests;
+			sourceTree = "<group>";
+		};
+		17053CEA18CD8BEF006228ED /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				17053CEB18CD8BEF006228ED /* QYMovieScannerTests-Info.plist */,
+				17053CEC18CD8BEF006228ED /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		17053CFA18CD8CC6006228ED /* baseViews */ = {
+			isa = PBXGroup;
+			children = (
+				17053D3318CD8D60006228ED /* QYBaseView.h */,
+				17053D3418CD8D60006228ED /* QYBaseView.m */,
+				17053D3618CD8D75006228ED /* QYBaseViewController.h */,
+				17053D3718CD8D75006228ED /* QYBaseViewController.m */,
+			);
+			path = baseViews;
+			sourceTree = "<group>";
+		};
+		17053CFB18CD8CC6006228ED /* modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = modules;
+			sourceTree = "<group>";
+		};
+		17053CFC18CD8CC6006228ED /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				17053D1C18CD8D39006228ED /* EGOTableViewPullRefresh */,
+				17053CFF18CD8D15006228ED /* SDWebImageView */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		17053CFD18CD8CC6006228ED /* viewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = viewControllers;
+			sourceTree = "<group>";
+		};
+		17053CFE18CD8CC6006228ED /* views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		17053CFF18CD8D15006228ED /* SDWebImageView */ = {
+			isa = PBXGroup;
+			children = (
+				17053D0018CD8D15006228ED /* MKAnnotationView+WebCache.h */,
+				17053D0118CD8D15006228ED /* MKAnnotationView+WebCache.m */,
+				17053D0218CD8D15006228ED /* SDImageCache.h */,
+				17053D0318CD8D15006228ED /* SDImageCache.m */,
+				17053D0418CD8D15006228ED /* SDImageCacheDelegate.h */,
+				17053D0518CD8D15006228ED /* SDWebImageCompat.h */,
+				17053D0618CD8D15006228ED /* SDWebImageDecoder.h */,
+				17053D0718CD8D15006228ED /* SDWebImageDecoder.m */,
+				17053D0818CD8D15006228ED /* SDWebImageDownloader.h */,
+				17053D0918CD8D15006228ED /* SDWebImageDownloader.m */,
+				17053D0A18CD8D15006228ED /* SDWebImageDownloaderDelegate.h */,
+				17053D0B18CD8D15006228ED /* SDWebImageManager.h */,
+				17053D0C18CD8D15006228ED /* SDWebImageManager.m */,
+				17053D0D18CD8D15006228ED /* SDWebImageManagerDelegate.h */,
+				17053D0E18CD8D15006228ED /* SDWebImagePrefetcher.h */,
+				17053D0F18CD8D15006228ED /* SDWebImagePrefetcher.m */,
+				17053D1018CD8D15006228ED /* UIButton+WebCache.h */,
+				17053D1118CD8D15006228ED /* UIButton+WebCache.m */,
+				17053D1218CD8D15006228ED /* UIImageView+WebCache.h */,
+				17053D1318CD8D15006228ED /* UIImageView+WebCache.m */,
+			);
+			path = SDWebImageView;
+			sourceTree = "<group>";
+		};
+		17053D1C18CD8D39006228ED /* EGOTableViewPullRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				17053D1D18CD8D39006228ED /* Classes */,
+				17053D2118CD8D39006228ED /* Resources */,
+			);
+			path = EGOTableViewPullRefresh;
+			sourceTree = "<group>";
+		};
+		17053D1D18CD8D39006228ED /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				17053D1E18CD8D39006228ED /* View */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		17053D1E18CD8D39006228ED /* View */ = {
+			isa = PBXGroup;
+			children = (
+				17053D1F18CD8D39006228ED /* EGORefreshTableHeaderView.h */,
+				17053D2018CD8D39006228ED /* EGORefreshTableHeaderView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		17053D2118CD8D39006228ED /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				17053D2218CD8D39006228ED /* blackArrow.png */,
+				17053D2318CD8D39006228ED /* blackArrow@2x.png */,
+				17053D2418CD8D39006228ED /* blueArrow.png */,
+				17053D2518CD8D39006228ED /* blueArrow@2x.png */,
+				17053D2618CD8D39006228ED /* grayArrow.png */,
+				17053D2718CD8D39006228ED /* grayArrow@2x.png */,
+				17053D2818CD8D39006228ED /* whiteArrow.png */,
+				17053D2918CD8D39006228ED /* whiteArrow@2x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		17053CC618CD8BEF006228ED /* QYMovieScanner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17053CF318CD8BEF006228ED /* Build configuration list for PBXNativeTarget "QYMovieScanner" */;
+			buildPhases = (
+				17053CC318CD8BEF006228ED /* Sources */,
+				17053CC418CD8BEF006228ED /* Frameworks */,
+				17053CC518CD8BEF006228ED /* Resources */,
+				17053CF918CD8C02006228ED /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QYMovieScanner;
+			productName = QYMovieScanner;
+			productReference = 17053CC718CD8BEF006228ED /* QYMovieScanner.app */;
+			productType = "com.apple.product-type.application";
+		};
+		17053CE118CD8BEF006228ED /* QYMovieScannerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17053CF618CD8BEF006228ED /* Build configuration list for PBXNativeTarget "QYMovieScannerTests" */;
+			buildPhases = (
+				17053CDE18CD8BEF006228ED /* Sources */,
+				17053CDF18CD8BEF006228ED /* Frameworks */,
+				17053CE018CD8BEF006228ED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				17053CE818CD8BEF006228ED /* PBXTargetDependency */,
+			);
+			name = QYMovieScannerTests;
+			productName = QYMovieScannerTests;
+			productReference = 17053CE218CD8BEF006228ED /* QYMovieScannerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		17053CBF18CD8BEF006228ED /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = QY;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = freeDev;
+				TargetAttributes = {
+					17053CE118CD8BEF006228ED = {
+						TestTargetID = 17053CC618CD8BEF006228ED;
+					};
+				};
+			};
+			buildConfigurationList = 17053CC218CD8BEF006228ED /* Build configuration list for PBXProject "QYMovieScanner" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 17053CBE18CD8BEF006228ED;
+			productRefGroup = 17053CC818CD8BEF006228ED /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				17053CC618CD8BEF006228ED /* QYMovieScanner */,
+				17053CE118CD8BEF006228ED /* QYMovieScannerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		17053CC518CD8BEF006228ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17053D2E18CD8D39006228ED /* blueArrow@2x.png in Resources */,
+				17053CD518CD8BEF006228ED /* InfoPlist.strings in Resources */,
+				17053D3218CD8D39006228ED /* whiteArrow@2x.png in Resources */,
+				17053D2B18CD8D39006228ED /* blackArrow.png in Resources */,
+				17053D3018CD8D39006228ED /* grayArrow@2x.png in Resources */,
+				17053D2D18CD8D39006228ED /* blueArrow.png in Resources */,
+				17053D2C18CD8D39006228ED /* blackArrow@2x.png in Resources */,
+				17053D2F18CD8D39006228ED /* grayArrow.png in Resources */,
+				17053D3118CD8D39006228ED /* whiteArrow.png in Resources */,
+				17053CDD18CD8BEF006228ED /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17053CE018CD8BEF006228ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17053CEE18CD8BEF006228ED /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		17053CF918CD8C02006228ED /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "KEYWORDS=\"TODO:|FIXME:|\\?\\?\\?:|\\!\\!\\!:\"\nfind \"${SRCROOT}\" \\( -name \"*.h\" -or -name \"*.m\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($KEYWORDS).*\\$\" | perl -p -e \"s/($KEYWORDS)/ warning: \\$1/\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		17053CC318CD8BEF006228ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17053CDB18CD8BEF006228ED /* QYAppDelegate.m in Sources */,
+				17053D1918CD8D15006228ED /* SDWebImagePrefetcher.m in Sources */,
+				17053D1B18CD8D15006228ED /* UIImageView+WebCache.m in Sources */,
+				17053D1818CD8D15006228ED /* SDWebImageManager.m in Sources */,
+				17053CD718CD8BEF006228ED /* main.m in Sources */,
+				17053D1618CD8D15006228ED /* SDWebImageDecoder.m in Sources */,
+				17053D1418CD8D15006228ED /* MKAnnotationView+WebCache.m in Sources */,
+				17053D3518CD8D60006228ED /* QYBaseView.m in Sources */,
+				17053D2A18CD8D39006228ED /* EGORefreshTableHeaderView.m in Sources */,
+				17053D3818CD8D75006228ED /* QYBaseViewController.m in Sources */,
+				17053D1718CD8D15006228ED /* SDWebImageDownloader.m in Sources */,
+				17053D1A18CD8D15006228ED /* UIButton+WebCache.m in Sources */,
+				17053D1518CD8D15006228ED /* SDImageCache.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17053CDE18CD8BEF006228ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17053CF018CD8BEF006228ED /* QYMovieScannerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		17053CE818CD8BEF006228ED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 17053CC618CD8BEF006228ED /* QYMovieScanner */;
+			targetProxy = 17053CE718CD8BEF006228ED /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		17053CD318CD8BEF006228ED /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				17053CD418CD8BEF006228ED /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		17053CEC18CD8BEF006228ED /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				17053CED18CD8BEF006228ED /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		17053CF118CD8BEF006228ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		17053CF218CD8BEF006228ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		17053CF418CD8BEF006228ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "QYMovieScanner/QYMovieScanner-Prefix.pch";
+				INFOPLIST_FILE = "QYMovieScanner/QYMovieScanner-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		17053CF518CD8BEF006228ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "QYMovieScanner/QYMovieScanner-Prefix.pch";
+				INFOPLIST_FILE = "QYMovieScanner/QYMovieScanner-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		17053CF718CD8BEF006228ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/QYMovieScanner.app/QYMovieScanner";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "QYMovieScanner/QYMovieScanner-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "QYMovieScannerTests/QYMovieScannerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		17053CF818CD8BEF006228ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/QYMovieScanner.app/QYMovieScanner";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "QYMovieScanner/QYMovieScanner-Prefix.pch";
+				INFOPLIST_FILE = "QYMovieScannerTests/QYMovieScannerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		17053CC218CD8BEF006228ED /* Build configuration list for PBXProject "QYMovieScanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17053CF118CD8BEF006228ED /* Debug */,
+				17053CF218CD8BEF006228ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17053CF318CD8BEF006228ED /* Build configuration list for PBXNativeTarget "QYMovieScanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17053CF418CD8BEF006228ED /* Debug */,
+				17053CF518CD8BEF006228ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		17053CF618CD8BEF006228ED /* Build configuration list for PBXNativeTarget "QYMovieScannerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17053CF718CD8BEF006228ED /* Debug */,
+				17053CF818CD8BEF006228ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 17053CBF18CD8BEF006228ED /* Project object */;
+}

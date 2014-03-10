@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>603E5F33-5853-4FFB-BB89-E8ACC2927D1B</string>
+	<key>IDESourceControlProjectName</key>
+	<string>QYMovieScanner</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>823C1930-08DD-4A0D-A3A3-E47FB2DB1C6E</key>
+		<string>https://github.com/lanou15ForthGroup/TheFirstProgram.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>QYMovieScanner/QYMovieScanner.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>823C1930-08DD-4A0D-A3A3-E47FB2DB1C6E</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/lanou15ForthGroup/TheFirstProgram.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>823C1930-08DD-4A0D-A3A3-E47FB2DB1C6E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>823C1930-08DD-4A0D-A3A3-E47FB2DB1C6E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>fisrtProDemo</string>
+		</dict>
+	</array>
+</dict>
+</plist>
