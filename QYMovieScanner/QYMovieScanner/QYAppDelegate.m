@@ -7,6 +7,7 @@
 //
 
 #import "QYAppDelegate.h"
+#import "QYMainViewController.h"
 
 @implementation QYAppDelegate
 
@@ -21,6 +22,13 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    //初始化视图
+    QYMainViewController *mainVC = [[QYMainViewController alloc] init];
+    self.window.rootViewController  = mainVC;
+    RELEASE_SAFETY(mainVC);
+    
+    
     
     return YES;
 }

@@ -15,4 +15,16 @@
     #import <Foundation/Foundation.h>
 #endif
 
+//安全释放
 #define RELEASE_SAFETY(__TYPE__) do{[__TYPE__ release], __TYPE__ = nil;}while(0)
+
+//获取设备的物理高度
+#define ScreenHeight [UIScreen mainScreen].bounds.size.height
+
+//获取设备的物理宽度
+#define ScreenWidth [UIScreen mainScreen].bounds.size.width
+
+
+//获取设备版本
+#define DEVICE_VERSION [[[UIDevice currentDevice] systemVersion] floatValue]
+

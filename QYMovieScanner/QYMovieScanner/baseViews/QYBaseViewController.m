@@ -28,7 +28,18 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }
-
+//设置导航栏上的标题
+- (void)setTitle:(NSString *)title {
+    [super setTitle:title];
+    //设置Navigation导航栏视图文字颜色
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+    titleLabel.textColor = [UIColor whiteColor];
+    titleLabel.font = [UIFont boldSystemFontOfSize:18.0f];
+    titleLabel.backgroundColor = [UIColor clearColor];
+    titleLabel.text = title;
+    [titleLabel sizeToFit];
+    self.navigationItem.titleView = titleLabel;
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

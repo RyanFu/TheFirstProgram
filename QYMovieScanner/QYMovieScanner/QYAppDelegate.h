@@ -6,10 +6,11 @@
 //  Copyright (c) 2014年 freeDev. All rights reserved.
 //
 
+
 #import <UIKit/UIKit.h>
 
-@interface QYAppDelegate : UIResponder <UIApplicationDelegate>
 
+@interface QYAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (retain, nonatomic) UIWindow *window;
 
