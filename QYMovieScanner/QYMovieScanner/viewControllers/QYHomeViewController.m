@@ -7,6 +7,9 @@
 //
 
 #import "QYHomeViewController.h"
+#import "JSON.h"
+#import "QYHttpRequestManager.h"
+
 
 @interface QYHomeViewController ()
 
@@ -19,7 +22,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        self.title = @"首页";
+        self.title = @"推荐首页";
     }
     return self;
 }
@@ -29,6 +32,12 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor cyanColor];
+
+//TODO:测试数据
+    SBJsonParser* parser = [[SBJsonParser alloc] init];
+    NSDictionary* movieDic = [parser objectWithString:[QYHttpRequestManager getVideoSearchList]];
+    NSLog(@"%@",movieDic);
+
 }
 
 - (void)didReceiveMemoryWarning

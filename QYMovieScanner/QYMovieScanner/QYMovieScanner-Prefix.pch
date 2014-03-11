@@ -28,3 +28,44 @@
 //获取设备版本
 #define DEVICE_VERSION [[[UIDevice currentDevice] systemVersion] floatValue]
 
+//土豆开放平台
+#define kAppKey @"33b2e6eb944a6449"
+#define kAppSecret @"f9ae8be7d19db8409f431ee084eaf31e"
+#define kAppRedirectURI @"http://open.tudou.com/apps"
+//关键字
+#define kKeyWord @"爱土豆"
+//视频编码
+#define kItemCodes @"kbPzDzCIeBE"
+//频道id
+#define kChannelId 20
+
+
+//土豆开放平台相关API
+//视频搜索
+#define kTUDO_VIDEO_SEARCH_URL [NSString stringWithFormat:@"%@%@%@%@%@",@"http://api.tudou.com/v6/video/search?app_key=",kAppKey,@"&format=json&kw=",kKeyWord,@"&pageNo=1&pageSize=20&orderBy=createTime"];
+
+
+//视频信息
+#define kTUDO_VIDEO_INFO_URL [NSString stringWithFormat:@"%@%@%@%@",@"http://api.tudou.com/v6/video/info?app_key=",kAppKey,@"&format=json&itemCodes=",kItemCodes];
+
+//视频排行榜
+#define kTUDO_VIDEO_TOPLIST_URL [NSString stringWithFormat:@"%@%@%@%d%@",@"http://api.tudou.com/v6/video/top_list?app_key=",kAppKey,@"&format=json&channelId=",kChannelId,@"&pageNo=1&pageSize=20&orderBy=t"];
+
+//视频状态
+#define kTUDO_VIDEO_STATUS_URL [NSString stringWithFormat:@"%@%@%@%@",@"http://api.tudou.com/v6/video/status?app_key=",kAppKey,@"&format=json&itemCodes=",kItemCodes];
+
+//视频评论
+#define kTUDO_VIDEO_COMMENTLIST_URL [NSString stringWithFormat:@"%@%@%@%@%@",@"http://api.tudou.com/v6/video/comment_list?app_key=",kAppKey,@"&format=json&itemCode=",kItemCodes,@"&getType=getCmt&pageNo=1&pageSize=20"];
+
+
+
+
+
+
+
+
+
+
+
+
+

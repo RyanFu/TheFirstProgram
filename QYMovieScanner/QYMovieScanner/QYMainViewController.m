@@ -12,6 +12,9 @@
 
 @interface QYMainViewController ()
 
+-(void)_initCustomTabbarView;//初始化自定义Tabbar
+-(void)_initShowViewControllers;//初始化视图
+
 @end
 
 @implementation QYMainViewController
@@ -35,6 +38,7 @@
     //调用自定义tabbar
     [self _initCustomTabbarView];
     
+        
 
 }
 #pragma mark-初始化界面视图方法-
@@ -72,10 +76,6 @@
     _tabbarView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"tabbar_background.png"]];
     //添加自定义视图
     [self.view addSubview:_tabbarView];
-    //
-//    UIImageView *tabbarGroundImage = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tabbar_background.png"]] autorelease];
-//    tabbarGroundImage.frame = _tabbarView.bounds;
-//    [_tabbarView addSubview:tabbarGroundImage];
     
     //存储按钮图片
     NSArray *bgNormal = @[@"tabbar_home.png",@"tabbar_more.png",@"tabbar_discover.png",@"tabbar_profile.png"];
@@ -87,10 +87,10 @@
         NSString *heighImage = bghightligth[i];
         //初始化自定义按钮
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-        button.frame = CGRectMake((78-70)/2+i*78,(49-30)/2 ,70,30);
+        button.frame = CGRectMake((78-70)/2+i*78,(49-27)/2 ,70,27);
         button.tag = i;//设置按钮tag
         [button setImage:[UIImage imageNamed:backImage] forState:UIControlStateNormal];
-        [button setImage:[UIImage imageNamed:heighImage] forState:UIControlStateNormal];
+        [button setImage:[UIImage imageNamed:heighImage] forState:UIControlStateHighlighted];
         [button addTarget:self action:@selector(selectedTab:) forControlEvents:UIControlEventTouchUpInside];
         //添加自定义按钮
         [_tabbarView addSubview:button];
@@ -114,7 +114,6 @@
     [UIView animateWithDuration:0.2 animations:^{
         _sliderView.left = x;
     }];
-
     
 }
 - (void)didReceiveMemoryWarning
