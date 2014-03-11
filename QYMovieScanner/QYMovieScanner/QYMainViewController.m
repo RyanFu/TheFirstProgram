@@ -69,13 +69,13 @@
     
     //初始化自定义tabbar视图
     _tabbarView = [[UIView alloc] initWithFrame:CGRectMake(0, ScreenHeight-49, 320, 49)];
-//    _tabbarView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"tabbar_background.png"]];
+    _tabbarView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"tabbar_background.png"]];
     //添加自定义视图
     [self.view addSubview:_tabbarView];
     //
-    UIImageView *tabbarGroundImage = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tabbar_background.png"]] autorelease];
-    tabbarGroundImage.frame = _tabbarView.bounds;
-    [_tabbarView addSubview:tabbarGroundImage];
+//    UIImageView *tabbarGroundImage = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tabbar_background.png"]] autorelease];
+//    tabbarGroundImage.frame = _tabbarView.bounds;
+//    [_tabbarView addSubview:tabbarGroundImage];
     
     //存储按钮图片
     NSArray *bgNormal = @[@"tabbar_home.png",@"tabbar_more.png",@"tabbar_discover.png",@"tabbar_profile.png"];
@@ -94,6 +94,7 @@
         [button addTarget:self action:@selector(selectedTab:) forControlEvents:UIControlEventTouchUpInside];
         //添加自定义按钮
         [_tabbarView addSubview:button];
+        
     }
     
     //初始化自定义tabbar下滑条
