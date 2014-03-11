@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>B755A19C-8809-4504-B323-A0C51DAE15B0</string>
+	<string>81ED7CD8-5D0F-4AAB-973B-86059A93A600</string>
 	<key>IDESourceControlProjectName</key>
 	<string>QYMovieScanner</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>823C1930-08DD-4A0D-A3A3-E47FB2DB1C6E</key>
-		<string>https://github.com/lanou15ForthGroup/TheFirstProgram.git</string>
+		<key>3AC966CA-9A82-422C-9CBB-8C73672D0AB6</key>
+		<string>https://github.com/lanou15ForthGroup/TheFirstProgram</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>QYMovieScanner/QYMovieScanner.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>823C1930-08DD-4A0D-A3A3-E47FB2DB1C6E</key>
+		<key>3AC966CA-9A82-422C-9CBB-8C73672D0AB6</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/lanou15ForthGroup/TheFirstProgram.git</string>
+	<string>https://github.com/lanou15ForthGroup/TheFirstProgram</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>823C1930-08DD-4A0D-A3A3-E47FB2DB1C6E</string>
+	<string>3AC966CA-9A82-422C-9CBB-8C73672D0AB6</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>823C1930-08DD-4A0D-A3A3-E47FB2DB1C6E</string>
+			<string>3AC966CA-9A82-422C-9CBB-8C73672D0AB6</string>
 			<key>IDESourceControlWCCName</key>
-			<string>fisrtProDemo</string>
+			<string>show</string>
 		</dict>
 	</array>
 </dict>
