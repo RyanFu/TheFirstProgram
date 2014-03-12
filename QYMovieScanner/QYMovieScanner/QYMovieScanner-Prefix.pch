@@ -37,29 +37,72 @@
 //视频编码
 #define kItemCodes @"kbPzDzCIeBE"
 //频道id
-#define kChannelId 20
+#define kChannelId 99
 
 
 //土豆开放平台相关API
 //视频搜索
-#define kTUDO_VIDEO_SEARCH_URL [NSString stringWithFormat:@"%@%@%@%@%@",@"http://api.tudou.com/v6/video/search?app_key=",kAppKey,@"&format=json&kw=",kKeyWord,@"&pageNo=1&pageSize=20&orderBy=createTime"];
-
+#define kTUDO_VIDEO_SEARCH_URL(__kKeyWord__) [NSString stringWithFormat:@"%@%@%@%@%@",@"http://api.tudou.com/v6/video/search?app_key=",kAppKey,@"&format=json&kw=",__kKeyWord__,@"&pageNo=1&pageSize=20&orderBy=createTime"];
 
 //视频信息
-#define kTUDO_VIDEO_INFO_URL [NSString stringWithFormat:@"%@%@%@%@",@"http://api.tudou.com/v6/video/info?app_key=",kAppKey,@"&format=json&itemCodes=",kItemCodes];
+#define kTUDO_VIDEO_INFO_URL(__kItemCodes__) [NSString stringWithFormat:@"%@%@%@%@",@"http://api.tudou.com/v6/video/info?app_key=",kAppKey,@"&format=json&itemCodes=",__kItemCodes__];
 
 //视频排行榜
-#define kTUDO_VIDEO_TOPLIST_URL [NSString stringWithFormat:@"%@%@%@%d%@",@"http://api.tudou.com/v6/video/top_list?app_key=",kAppKey,@"&format=json&channelId=",kChannelId,@"&pageNo=1&pageSize=20&orderBy=t"];
+#define kTUDO_VIDEO_TOPLIST_URL(__kChannelId__) [NSString stringWithFormat:@"%@%@%@%d%@",@"http://api.tudou.com/v6/video/top_list?app_key=",kAppKey,@"&format=json&channelId=",__kChannelId__,@"&pageNo=1&pageSize=5&orderBy=t"];
 
 //视频状态
-#define kTUDO_VIDEO_STATUS_URL [NSString stringWithFormat:@"%@%@%@%@",@"http://api.tudou.com/v6/video/status?app_key=",kAppKey,@"&format=json&itemCodes=",kItemCodes];
+#define kTUDO_VIDEO_STATUS_URL(__kItemCodes__) [NSString stringWithFormat:@"%@%@%@%@",@"http://api.tudou.com/v6/video/status?app_key=",kAppKey,@"&format=json&itemCodes=",__kItemCodes__];
 
 //视频评论
-#define kTUDO_VIDEO_COMMENTLIST_URL [NSString stringWithFormat:@"%@%@%@%@%@",@"http://api.tudou.com/v6/video/comment_list?app_key=",kAppKey,@"&format=json&itemCode=",kItemCodes,@"&getType=getCmt&pageNo=1&pageSize=20"];
+#define kTUDO_VIDEO_COMMENTLIST_URL(__kItemCodes__) [NSString stringWithFormat:@"%@%@%@%@%@",@"http://api.tudou.com/v6/video/comment_list?app_key=",kAppKey,@"&format=json&itemCode=",__kItemCodes__,@"&getType=getCmt&pageNo=1&pageSize=20"];
 
 
+//频道ID枚举
+typedef enum channel{
+    
+    CHANNEL_ENTERTANMENTS = 1,//娱乐
+    CHANNEL_HAPPYLIFES = 3,//乐活
+    CHANNEL_MAKEFUNS = 5,//搞笑
+    CHANNEL_ANIMATIONSARTS = 9,//动画
+    CHANNEL_GAMES = 10,//游戏
+    CHANNEL_MUSICS = 14,//音乐
+    CHANNEL_PHYSICS = 15,//体育
+    CHANNEL_UNIVERSALS = 21,//科技
+    CHANNEL_MOVIES = 22,//影视
+    CHANNEL_RICHERS = 24,//财富
+    CHANNEL_EDUCATOINS = 25,//教育
+    CHANNEL_CARSMOTIONS = 26,//汽车
+    CHANNEL_WOMEN =27,//女性
+    CHANNEL_RECORDS = 28,//记录片
+    CHANNEL_HOTNEWS = 29,//热点新闻
+    CHANNEL_TELEVISIONS = 30,//电视剧
+    CHANNEL_COMMONARTS = 31,//综艺
+    CHANNEL_CUSTOMSTYLE = 32,//风尚
+    CHANNEL_ORIGINCREATE = 99,//原创
+    
+}channelLeadToSection;
 
-
+//频道关键字
+#define KEYWORD_CHANNEL_ENTERTANMENTS @"娱乐";//娱乐
+#define KEYWORD_CHANNEL_HAPPYLIFES  @"乐活";//乐活
+#define KEYWORD_CHANNEL_MAKEFUNS @"搞笑";//搞笑
+#define KEYWORD_CHANNEL_ANIMATIONSARTS @"动画";//动画
+#define KEYWORD_CHANNEL_GAMES @"游戏";//游戏
+#define KEYWORD_CHANNEL_MUSICS @"音乐";//音乐
+#define KEYWORD_CHANNEL_PHYSICS @"体育";//体育
+#define KEYWORD_CHANNEL_UNIVERSALS @"科技";//科技
+#define KEYWORD_CHANNEL_MOVIES @"影视";//影视
+#define KEYWORD_CHANNEL_RICHERS @"财富";//财富
+#define KEYWORD_CHANNEL_EDUCATOINS @"教育";//教育
+#define KEYWORD_CHANNEL_CARSMOTIONS @"汽车";//汽车
+#define KEYWORD_CHANNEL_WOMEN @"女性";//女性
+#define KEYWORD_CHANNEL_RECORDS @"记录片";//记录片
+#define KEYWORD_CHANNEL_HOTNEWS @"热点";//热点新闻
+#define KEYWORD_CHANNEL_TELEVISIONS @"电视剧";//电视剧
+#define KEYWORD_CHANNEL_COMMONARTS @"综艺";//综艺
+#define KEYWORD_CHANNEL_CUSTOMSTYLE @"风尚";//风尚
+#define KEYWORD_CHANNEL_ORIGINCREATE @"原创";//原创
+#define KEYWORD_CHANNEL_WRONGFLAG @"错误";//原创
 
 
 

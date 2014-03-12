@@ -15,56 +15,60 @@
 +(id)parserDataByRequest:(NSString *)requestLink{
 
     //实例化ASI
-    ASIHTTPRequest* requestString = [[[ASIHTTPRequest alloc] initWithURL:[NSURL URLWithString:requestLink]] autorelease];
-    [requestString startSynchronous];//开启同步
+    ASIHTTPRequest* requestString = [[ASIHTTPRequest alloc] initWithURL:[NSURL URLWithString:requestLink]];
+    [requestString startSynchronous];//开启异步
     NSString* string = [requestString responseString];
+    RELEASE_SAFETY(requestString);
     return string;
     
 }
 //视频搜索
-+(id)getVideoSearchList{
++(id)getVideoSearchList:(NSString *)keyWord{
 
-//    NSString *link = @"http://api.tudou.com/v6/video/search?app_key=33b2e6eb944a6449&format=json&kw=电影&pageNo=1&pageSize=5&orderBy=createTime";
-    
-    NSString *link = kTUDO_VIDEO_SEARCH_URL;
+    NSString *link = kTUDO_VIDEO_SEARCH_URL(keyWord);
     NSString *encodinglink = [link stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     
     return [self parserDataByRequest:encodinglink];
     
 }
 //视频信息
-+(id)getVideoInfoList{
++(id)getVideoInfoList:(NSString *)itemCodes{
 
-    NSString *link = kTUDO_VIDEO_INFO_URL;
+    NSString *link = kTUDO_VIDEO_INFO_URL(itemCodes);
     NSString *encodinglink = [link stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     
     return [self parserDataByRequest:encodinglink];
 
 }
 //视屏排行榜
-+(id)getVideoRankTopList{
++(id)getVideoRankTopList:(NSInteger)channelID{
 
-    NSString *link = kTUDO_VIDEO_TOPLIST_URL;
+    NSString *link = kTUDO_VIDEO_TOPLIST_URL(channelID);
     NSString *encodinglink = [link stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     
     return [self parserDataByRequest:encodinglink];
 
 }
 //视频评论
-+(id)getVideoCommentList{
++(id)getVideoCommentList:(NSString *)itemCodes{
 
-    NSString *link = kTUDO_VIDEO_COMMENTLIST_URL;
+    NSString *link = kTUDO_VIDEO_COMMENTLIST_URL(itemCodes);
     NSString *encodinglink = [link stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     
     return [self parserDataByRequest:encodinglink];
 
 }
 //视屏状态列表
-+(id)getVideoStatusList{
++(id)getVideoStatusList:(NSString *)itemCodes{
 
-    NSString *link = kTUDO_VIDEO_STATUS_URL;
+    NSString *link = kTUDO_VIDEO_STATUS_URL(itemCodes);
     NSString *encodinglink = [link stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     
     return [self parserDataByRequest:encodinglink];
 }
+
+
+
+
+
 @end

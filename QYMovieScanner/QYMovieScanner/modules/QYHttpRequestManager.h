@@ -61,6 +61,8 @@
  
   **************************************/
 
+
+
 //处理网络地址http的get请求
 @interface QYHttpRequestManager : NSObject
 
@@ -68,16 +70,16 @@
 +(id)parserDataByRequest:(NSString *)requestLink;
 
 #pragma mark--------读取接口部分-------------
-//处理视频搜索链接接口
-+(id)getVideoSearchList;
-//获取视频信息接口
-+(id)getVideoInfoList;
-//获取排行榜接口
-+(id)getVideoRankTopList;
-//获取视频状态接口
-+(id)getVideoStatusList;
-//获取视频评论皆苦
-+(id)getVideoCommentList;
+//处理视频搜索链接接口 kTUDO_VIDEO_SEARCH_URL(__kKeyWord__) 
++(id)getVideoSearchList:(NSString *)keyWord;
+//获取视频信息接口 kTUDO_VIDEO_INFO_URL(__kItemCodes__)
++(id)getVideoInfoList:(NSString *)itemCodes;
+//获取排行榜接口 kTUDO_VIDEO_TOPLIST_URL(__kChannelId__)
++(id)getVideoRankTopList:(NSInteger)channelID;
+//获取视频状态接口 kTUDO_VIDEO_STATUS_URL(__kItemCodes__)
++(id)getVideoStatusList:(NSString *)itemCodes;
+//获取视频评论接口 kTUDO_VIDEO_COMMENTLIST_URL(__kItemCodes__)
++(id)getVideoCommentList:(NSString *)itemCodes;
 
 /*
 #pragma mark------------读取豆单------------------

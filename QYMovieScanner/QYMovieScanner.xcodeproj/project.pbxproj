@@ -38,6 +38,12 @@
 		17053D3518CD8D60006228ED /* QYBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17053D3418CD8D60006228ED /* QYBaseView.m */; };
 		17053D3818CD8D75006228ED /* QYBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17053D3718CD8D75006228ED /* QYBaseViewController.m */; };
 		17053D4018CDC420006228ED /* QYMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17053D3F18CDC420006228ED /* QYMainViewController.m */; };
+		17186DBF18CFF05900679B01 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 17186DBC18CFF05900679B01 /* 1.jpg */; };
+		17186DC018CFF05900679B01 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 17186DBD18CFF05900679B01 /* 2.jpg */; };
+		17186DC118CFF05900679B01 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 17186DBE18CFF05900679B01 /* 3.jpg */; };
+		17186DC318CFF15800679B01 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17186DC218CFF15800679B01 /* ImageIO.framework */; };
+		17186DC518CFF16000679B01 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17186DC418CFF16000679B01 /* MapKit.framework */; };
+		17186DCD18CFF21B00679B01 /* EScrollerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17186DCC18CFF21B00679B01 /* EScrollerView.m */; };
 		1736D3AD18CEBC8000401DC3 /* tmp.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 1736D3AC18CEBC8000401DC3 /* tmp.rtf */; };
 		1751EC2118CDDD69004D8C3C /* QYCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1751EC2018CDDD69004D8C3C /* QYCategoryViewController.m */; };
 		1751EC2418CDDD7D004D8C3C /* QYProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1751EC2318CDDD7D004D8C3C /* QYProfileViewController.m */; };
@@ -63,6 +69,7 @@
 		178C058F18CF06E2004EADB1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 178C058E18CF06E2004EADB1 /* SystemConfiguration.framework */; };
 		178C059118CF06F2004EADB1 /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 178C059018CF06F2004EADB1 /* libz.1.2.5.dylib */; };
 		178C059318CF070A004EADB1 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 178C059218CF070A004EADB1 /* CFNetwork.framework */; };
+		178C059618CF24FA004EADB1 /* QYVideoModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 178C059518CF24FA004EADB1 /* QYVideoModule.m */; };
 		178FA37C18CE9F1100E7663F /* Icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 178FA36718CE9F1100E7663F /* Icon-40.png */; };
 		178FA37D18CE9F1100E7663F /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 178FA36818CE9F1100E7663F /* Icon-40@2x.png */; };
 		178FA37E18CE9F1100E7663F /* Icon-60.png in Resources */ = {isa = PBXBuildFile; fileRef = 178FA36918CE9F1100E7663F /* Icon-60.png */; };
@@ -180,6 +187,13 @@
 		17053D3718CD8D75006228ED /* QYBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QYBaseViewController.m; sourceTree = "<group>"; };
 		17053D3E18CDC420006228ED /* QYMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QYMainViewController.h; sourceTree = "<group>"; };
 		17053D3F18CDC420006228ED /* QYMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QYMainViewController.m; sourceTree = "<group>"; };
+		17186DBC18CFF05900679B01 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		17186DBD18CFF05900679B01 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
+		17186DBE18CFF05900679B01 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
+		17186DC218CFF15800679B01 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		17186DC418CFF16000679B01 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		17186DCB18CFF21B00679B01 /* EScrollerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EScrollerView.h; sourceTree = "<group>"; };
+		17186DCC18CFF21B00679B01 /* EScrollerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EScrollerView.m; sourceTree = "<group>"; };
 		1736D3AC18CEBC8000401DC3 /* tmp.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; name = tmp.rtf; path = ../tmp.rtf; sourceTree = "<group>"; };
 		1751EC1F18CDDD69004D8C3C /* QYCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QYCategoryViewController.h; sourceTree = "<group>"; };
 		1751EC2018CDDD69004D8C3C /* QYCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QYCategoryViewController.m; sourceTree = "<group>"; };
@@ -230,6 +244,8 @@
 		178C058E18CF06E2004EADB1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		178C059018CF06F2004EADB1 /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
 		178C059218CF070A004EADB1 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		178C059418CF24FA004EADB1 /* QYVideoModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QYVideoModule.h; sourceTree = "<group>"; };
+		178C059518CF24FA004EADB1 /* QYVideoModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QYVideoModule.m; sourceTree = "<group>"; };
 		178FA36718CE9F1100E7663F /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
 		178FA36818CE9F1100E7663F /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
 		178FA36918CE9F1100E7663F /* Icon-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60.png"; sourceTree = "<group>"; };
@@ -289,6 +305,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17186DC518CFF16000679B01 /* MapKit.framework in Frameworks */,
+				17186DC318CFF15800679B01 /* ImageIO.framework in Frameworks */,
 				178C059318CF070A004EADB1 /* CFNetwork.framework in Frameworks */,
 				178C059118CF06F2004EADB1 /* libz.1.2.5.dylib in Frameworks */,
 				178C058F18CF06E2004EADB1 /* SystemConfiguration.framework in Frameworks */,
@@ -334,6 +352,8 @@
 		17053CC918CD8BEF006228ED /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				17186DC418CFF16000679B01 /* MapKit.framework */,
+				17186DC218CFF15800679B01 /* ImageIO.framework */,
 				178C058C18CF0663004EADB1 /* libxml2.dylib */,
 				178C059018CF06F2004EADB1 /* libz.1.2.5.dylib */,
 				178C059218CF070A004EADB1 /* CFNetwork.framework */,
@@ -349,6 +369,9 @@
 		17053CD018CD8BEF006228ED /* QYMovieScanner */ = {
 			isa = PBXGroup;
 			children = (
+				17186DBC18CFF05900679B01 /* 1.jpg */,
+				17186DBD18CFF05900679B01 /* 2.jpg */,
+				17186DBE18CFF05900679B01 /* 3.jpg */,
 				17053D3918CDBB08006228ED /* image */,
 				17053CFC18CD8CC6006228ED /* utils */,
 				17053CFE18CD8CC6006228ED /* views */,
@@ -413,6 +436,8 @@
 			children = (
 				176508E018CEEBBA00AC43FC /* QYHttpRequestManager.h */,
 				176508E118CEEBBA00AC43FC /* QYHttpRequestManager.m */,
+				178C059418CF24FA004EADB1 /* QYVideoModule.h */,
+				178C059518CF24FA004EADB1 /* QYVideoModule.m */,
 			);
 			path = modules;
 			sourceTree = "<group>";
@@ -420,6 +445,7 @@
 		17053CFC18CD8CC6006228ED /* utils */ = {
 			isa = PBXGroup;
 			children = (
+				17186DCA18CFF1A000679B01 /* EScrollerView */,
 				178C056B18CF03BD004EADB1 /* ASIHTTPRequest */,
 				176508CF18CEEB4400AC43FC /* SBJson */,
 				17FBE4B918CDF38400F767A9 /* UIViewExt.h */,
@@ -589,6 +615,15 @@
 				1751EC2018CDDD69004D8C3C /* QYCategoryViewController.m */,
 			);
 			name = category;
+			sourceTree = "<group>";
+		};
+		17186DCA18CFF1A000679B01 /* EScrollerView */ = {
+			isa = PBXGroup;
+			children = (
+				17186DCB18CFF21B00679B01 /* EScrollerView.h */,
+				17186DCC18CFF21B00679B01 /* EScrollerView.m */,
+			);
+			path = EScrollerView;
 			sourceTree = "<group>";
 		};
 		176508CF18CEEB4400AC43FC /* SBJson */ = {
@@ -766,6 +801,7 @@
 				17FBE4A918CDEFFE00F767A9 /* tabbar_more.png in Resources */,
 				178FA38A18CE9F1100E7663F /* Icon-Small.png in Resources */,
 				17FBE4AB18CDEFFE00F767A9 /* tabbar_more_selected.png in Resources */,
+				17186DC118CFF05900679B01 /* 3.jpg in Resources */,
 				178FA37E18CE9F1100E7663F /* Icon-60.png in Resources */,
 				178FA38E18CE9F1100E7663F /* iTunesArtwork.png in Resources */,
 				178FA38D18CE9F1100E7663F /* Icon@2x.png in Resources */,
@@ -789,6 +825,7 @@
 				178FA37F18CE9F1100E7663F /* Icon-60@2x.png in Resources */,
 				178FA38918CE9F1100E7663F /* Icon-Small-50@2x.png in Resources */,
 				17053D2B18CD8D39006228ED /* blackArrow.png in Resources */,
+				17186DC018CFF05900679B01 /* 2.jpg in Resources */,
 				17053D3018CD8D39006228ED /* grayArrow@2x.png in Resources */,
 				17FBE48918CDEFEC00F767A9 /* tabbar_home_selected.png in Resources */,
 				17FBE4AD18CDEFFE00F767A9 /* tabbar_more_highlighted.png in Resources */,
@@ -814,6 +851,7 @@
 				17FBE49018CDEFEC00F767A9 /* tabbar_discover_highlighted@2x.png in Resources */,
 				17FBE4A418CDEFFE00F767A9 /* tabbar_profile_selected@2x.png in Resources */,
 				178FA38118CE9F1100E7663F /* Icon-76@2x.png in Resources */,
+				17186DBF18CFF05900679B01 /* 1.jpg in Resources */,
 				178FA38818CE9F1100E7663F /* Icon-Small-50.png in Resources */,
 				17FBE4A218CDEFFE00F767A9 /* tabbar_profile@2x.png in Resources */,
 				17FBE48D18CDEFEC00F767A9 /* tabbar_discover.png in Resources */,
@@ -863,11 +901,13 @@
 				17053D1918CD8D15006228ED /* SDWebImagePrefetcher.m in Sources */,
 				17053D1B18CD8D15006228ED /* UIImageView+WebCache.m in Sources */,
 				176508DE18CEEB4400AC43FC /* SBJsonParser.m in Sources */,
+				178C059618CF24FA004EADB1 /* QYVideoModule.m in Sources */,
 				17053D1818CD8D15006228ED /* SDWebImageManager.m in Sources */,
 				1751EC2D18CDDE58004D8C3C /* QYBaseNavigationController.m in Sources */,
 				17053CD718CD8BEF006228ED /* main.m in Sources */,
 				1751EC2A18CDDD9E004D8C3C /* QYHomeViewController.m in Sources */,
 				17FBE4BB18CDF38400F767A9 /* UIViewExt.m in Sources */,
+				17186DCD18CFF21B00679B01 /* EScrollerView.m in Sources */,
 				176508DC18CEEB4400AC43FC /* NSString+SBJSON.m in Sources */,
 				176508DF18CEEB4400AC43FC /* SBJsonWriter.m in Sources */,
 				17053D1618CD8D15006228ED /* SDWebImageDecoder.m in Sources */,

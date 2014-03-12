@@ -32,7 +32,7 @@
 - (void)setTitle:(NSString *)title {
     [super setTitle:title];
     //设置Navigation导航栏视图文字颜色
-    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+    UILabel *titleLabel = [[[UILabel alloc] initWithFrame:CGRectZero] autorelease];
     titleLabel.textColor = [UIColor whiteColor];
     titleLabel.font = [UIFont boldSystemFontOfSize:18.0f];
     titleLabel.backgroundColor = [UIColor clearColor];
