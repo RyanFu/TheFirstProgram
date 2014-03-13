@@ -13,6 +13,20 @@
 -(id)initWithVideoInfos:(NSDictionary *)dictionary{
     
     if (self = [super init]) {
+        /*
+        self.bigPicUrl = [dictionary objectForKey:@"bigPicUrl"];
+        self.channelId = (NSInteger)[dictionary objectForKey:@"channelId"];
+        self.pubDate = [dictionary objectForKey:@"pubDate"];
+        self.title = [dictionary objectForKey:@"title"];
+        self.tags = [dictionary objectForKey:@"tags"];
+        self.description = [dictionary objectForKey:@"description"];
+        self.picUrl = [dictionary objectForKey:@"picUrl"];
+        self.totalTime = [dictionary objectForKey:@"totalTime"];
+        self.playUrl = [dictionary objectForKey:@"playUrl"];
+        */
+        self.itemCode = [dictionary objectForKey:@"itemCode"];
+        self.downEnable = (NSInteger)[dictionary objectForKey:@"downEnable"];
+        self.commentCount = (NSInteger)[dictionary objectForKey:@"commentCount"];
         //使用KVC模式设置属性
         NSArray *keyArray = [dictionary allKeys];
         for (NSString *key in keyArray) {
@@ -84,9 +98,9 @@
     RELEASE_SAFETY(_bigPicUrl);
     RELEASE_SAFETY(_picUrl);
     RELEASE_SAFETY(_playUrl);
-    RELEASE_SAFETY(_itemCode);
+//    RELEASE_SAFETY(_itemCode);
     RELEASE_SAFETY(_title);
-    RELEASE_SAFETY(_tags);
+//    RELEASE_SAFETY(_tags);
     RELEASE_SAFETY(_description);
     RELEASE_SAFETY(_totalTime);
     RELEASE_SAFETY(_pubDate);

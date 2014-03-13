@@ -8,24 +8,12 @@
 
 #import "QYHomeViewController.h"
 #import "QYHttpRequestManager.h"
+#import "QYVodeoDetailViewController.h"
 #import "JSON.h"
+#import "UIUtils.h"
 #import "QYVideoModule.h"
 
 @interface QYHomeViewController ()
-
-//测试表视图
-@property (nonatomic ,retain) UITableView * homeTableView;
-//用来接受下载解析完的数据
-@property (nonatomic ,retain) NSMutableDictionary * tableViewDictionary;
-//表视图的section对应的频道
-@property (nonatomic ,retain) NSDictionary * sectionDictionary;
-//网络请求用到的频道值
-@property (nonatomic ,retain) NSString * channelString;
-//QYMovieRequest类，多次使用，设为属性，方便调用
-//@property (nonatomic ,retain) QYMovieRequest * movieRequst;
-//tabHeaderView的网络数据组成的数组
-@property (nonatomic ,retain) NSMutableArray * scrollViewArray;
-
 
 -(void)_initTableView;
 -(void)_loadVideoArrayData:(NSArray *)channelIDArray;
@@ -41,77 +29,98 @@
         // Custom initialization
         self.title = @"推荐首页";
         /**********************初始化sectionDictionary***********************/
-        _sectionToChannelDictionary = [NSMutableDictionary dictionary];
-        [_sectionToChannelDictionary setObject:[NSNumber numberWithInt:CHANNEL_EDUCATOINS] forKey:@"0"];
-        [_sectionToChannelDictionary setObject:[NSNumber numberWithInt:CHANNEL_ENTERTANMENTS] forKey:@"1"];
-        [_sectionToChannelDictionary setObject:[NSNumber numberWithInt:CHANNEL_MOVIES] forKey:@"2"];
-        [_sectionToChannelDictionary setObject:[NSNumber numberWithInt:CHANNEL_HOTNEWS] forKey:@"3"];
-        
-        _tableSectionElementsDictionary = [NSMutableDictionary dictionary];
+        self.tableSectionElementsArray = [NSMutableArray array];
         
         /***************初始化轮播图片数组***************/
-        _imageURLS = [NSMutableArray arrayWithObjects:@"http://old.dongway.com.cn/picture/indexdatapic/2013-12/02/220d0bf6-bbf7-4a7e-b27b-80e3fdcaae8b.png",@"1.jpg",@"2.jpg",@"3.jpg",nil];
+        self.imageURLArray = [NSMutableArray array];
     }
     return self;
+}
+#pragma mark-------------- 初始化字典数据 根据频道获取 --------------------
+-(void)_loadVideoArrayData:(NSArray *)channelIDArray{
+    
+    SBJsonParser* parser = [[SBJsonParser alloc] init];//JSON解析
+   
+    NSDictionary *movieDic = [parser objectWithString:[QYHttpRequestManager getVideoRankTopList:CHANNEL_MOVIES]];
+//    NSLog(@"%@",movieDic);
+    NSArray *movie = [movieDic objectForKey:@"results"];//获取结果数组
+//    NSLog(@"%@",movie);
+    for (int i=0; i<movie.count-1; i++) {
+        NSDictionary *oneDic = movie[i];
+        //放置轮播图片
+        if (i<6) {
+            QYVideoModule *imageMovie = [[QYVideoModule alloc] initWithVideoInfos:oneDic];
+            [self.imageURLArray addObject:imageMovie];
+            RELEASE_SAFETY(imageMovie);
+        }
+        
+        QYVideoModule *addMoives = [[QYVideoModule alloc] initWithVideoInfos:oneDic];
+        NSLog(@"%@",addMoives);
+        //筛选出不同的视频对象
+        if (![[[QYVideoModule alloc] initWithVideoInfos:movie[i]] isEqual:[[QYVideoModule alloc] initWithVideoInfos:movie[i+1]]]) {
+            if (addMoives && addMoives.title != nil) {
+                [self.tableSectionElementsArray addObject:addMoives];
+                RELEASE_SAFETY(addMoives);
+            }
+        }
+    }
+    QYVideoModule *lastMovie = [[QYVideoModule alloc] initWithVideoInfos:[movie lastObject]];
+    [self.tableSectionElementsArray addObject:lastMovie];
+    RELEASE_SAFETY(lastMovie);
+    
+//    NSLog(@"%@",_tableSectionElementsArray);
+    NSLog(@"%d",self.tableSectionElementsArray.count);
+    
+    RELEASE_SAFETY(parser);
 }
 #pragma mark-------------- 表示图头部图片轮播数据初始化工作 --------------------
 - (void)setupViews:(NSMutableArray *)imagesURLS titlesChanels:(NSMutableArray *)titlesChanels{//传入图片地址
     
+    //循环得出存入数组的视频对象获取对应图片地址
+    NSMutableArray *imageUrl = [NSMutableArray arrayWithCapacity:imagesURLS.count];
+    for (int i = 0; i<imagesURLS.count;i++) {
+        QYVideoModule *url = imagesURLS[i];
+        [imageUrl addObject:url.bigPicUrl];
+    }
+    
     EScrollerView *scroller;
     //设置轮播图片
-    scroller=[[EScrollerView alloc] initWithFrameRect:CGRectMake(0, 20, 320, 150)
-                                           ImageArray:imagesURLS
+    scroller=[[EScrollerView alloc] initWithFrameRect:CGRectMake(0, 20, 320, 160)
+                                           ImageArray:imageUrl
                                            TitleArray:titlesChanels];
     scroller.delegate=self;
     self.tableView.tableHeaderView = scroller;//添加到表示图HeaderTableView上
     [scroller release];
     
 }
--(void)EScrollerViewDidClicked:(NSUInteger)index
-{
+-(void)EScrollerViewDidClicked:(NSUInteger)index{
+    
     NSLog(@"index--%d",index);
-}
-
-
-#pragma mark-------------- 初始化字典数据 根据频道获取 --------------------
--(void)_loadVideoArrayData:(NSArray *)channelIDArray{
-    
-    SBJsonParser* parser = [[SBJsonParser alloc] init];//JSON解析
-    //依次对6个频道进行网络请求数据，全部请求完成再刷新tableView的数据
-    //根据频道获取值
-    for (int i=0; i<channelIDArray.count; i++) {
-        //获取频道id
-        NSInteger channdelID = [channelIDArray[i] integerValue];
-        //根据频道id获取对字典
-        NSDictionary *channalDic = [parser objectWithString:[QYHttpRequestManager getVideoRankTopList:channdelID]];
-//        NSLog(@"%@",channalDic);
-        NSArray *movieInfoArray = [channalDic objectForKey:@"results"];
-//        NSLog(@"%@",movieInfoArray);
-        if (movieInfoArray == nil) {
-            [parser objectWithString:[QYHttpRequestManager getVideoRankTopList:channdelID]];
-        }
-        NSMutableArray *showMovies = [NSMutableArray arrayWithCapacity:movieInfoArray.count];
-        for (int j= 0; j <movieInfoArray.count; j++) {
-            NSDictionary *oneDic = movieInfoArray[j];//频道数组
-            QYVideoModule *movie = [[QYVideoModule alloc] initWithVideoInfos:oneDic];
-            NSLog(@"%@----%d",movie,j);
-            [showMovies addObject:movie];
-//            NSLog(@"%@",showMovies);
-            RELEASE_SAFETY(movie);
-        }
-        //将不同频道数组以键值方式存入
-        [_tableSectionElementsDictionary setObject:showMovies forKey:channelIDArray[i]];
+    if (index<self.imageURLArray.count+1) {
+        QYVideoModule *pic = [self.imageURLArray objectAtIndex:index-1];
+        QYVodeoDetailViewController *detailVC = [[QYVodeoDetailViewController alloc] init];
+        detailVC.picUrl = pic.playUrl;
+        [self.navigationController pushViewController:detailVC animated:YES];
+        RELEASE_SAFETY(detailVC);
+    }else{
+        //当index大于图片数组的长度+1-->此时为下一轮图片轮播开始
+        QYVideoModule *pic = [self.imageURLArray objectAtIndex:0];
+        QYVodeoDetailViewController *detailVC = [[QYVodeoDetailViewController alloc] init];
+        detailVC.picUrl = pic.playUrl;
+        [self.navigationController pushViewController:detailVC animated:YES];
+        RELEASE_SAFETY(detailVC);
     }
-//    NSLog(@"%@",_tableSectionElementsDictionary);
     
     
-    RELEASE_SAFETY(parser);
 }
+
 #pragma mark-------------- 初始化标示图 --------------------
 -(void)_initTableView{
 
     //表视图
-    self.tableView = [[[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped] autorelease];
+    self.tableView = [[[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain] autorelease];
+    self.tableView.showsHorizontalScrollIndicator = NO;
+    self.tableView.showsVerticalScrollIndicator = NO;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.view addSubview:self.tableView];
@@ -121,37 +130,41 @@
 {
     [super viewDidLoad];
 #pragma mark---表示图显示之前 属性初始化部分----
-    //初始化数组
-//    _tableVideosListArrayByChannel  = [[NSMutableArray array] autorelease];
+
     
 #pragma mark----程序按顺序执行部分-----
-    //调用加载视频方法
-    NSArray *arraysNumber =  @[[NSNumber numberWithInt:CHANNEL_EDUCATOINS],
-                               [NSNumber numberWithInt:CHANNEL_ENTERTANMENTS],
-                               [NSNumber numberWithInt:CHANNEL_MOVIES],
-                               [NSNumber numberWithInt:CHANNEL_HOTNEWS]];
-    
+
     //根据频道获取数据
-    [self _loadVideoArrayData:arraysNumber];
+    [self _loadVideoArrayData:nil];
     //初始化tableView
     [self _initTableView];
     //表示图初始化后待用该方法{此处放置网络图片轮播}
-     [self setupViews:_imageURLS titlesChanels:nil];
-    [_tableSectionElementsDictionary objectForKey:[NSNumber numberWithInt:CHANNEL_EDUCATOINS]];
+    NSLog(@"%d",self.imageURLArray.count);
+     [self setupViews:self.imageURLArray titlesChanels:nil];
+    
+#pragma mark--下拉刷新--
+    if (_refreshTableView == nil) {
+        //初始化下拉控件
+        EGORefreshTableHeaderView *refreshView = [[EGORefreshTableHeaderView alloc] initWithFrame:CGRectMake(0.0f,0.0f - self.tableView.bounds.size.height,self.view.frame.size.width,self.tableView.bounds.size.height)];
+        refreshView.delegate = self;
+        //        [refreshView setHidden:YES];
+        //将下拉刷新控件作为子控件添加到UITableView中
+        [self.tableView addSubview:refreshView];
+        _refreshTableView = refreshView;
+        
+    }
+    
+    //重新加载表格数据
+    [self.tableView reloadData];
     
 
 }
 
 #pragma mark--TableViewController  Delegate--
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-
-
-    return 4;
-}
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
 
 
-    return 3;
+    return _tableSectionElementsArray.count;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
 
@@ -160,14 +173,9 @@
     if (cell == nil) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellIndetifier] autorelease];
     }
-    NSString * sectionString = [NSString stringWithFormat:@"%d",indexPath.section];
-    NSNumber * numChannel = [self.sectionToChannelDictionary objectForKey:sectionString];
-//    NSLog(@"%@",self.sectionToChannelDictionary);
-    NSMutableArray * array = [self.tableSectionElementsDictionary objectForKey:numChannel];
-    cell.textLabel.text = ((QYVideoModule *)[array objectAtIndex:indexPath.row]).title;
-
-
-    
+    QYVideoModule *movieModule = [_tableSectionElementsArray objectAtIndex:indexPath.row];
+    cell.textLabel.text = movieModule.title;
+//    NSLog(@"%@",_tableSectionElementsArray);
     
     return cell;
 
@@ -175,25 +183,80 @@
 //sectionTitle
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
 
-    switch (section) {
-        case 0:
-            return KEYWORD_CHANNEL_EDUCATOINS;
-            break;
-        case 1:
-            return KEYWORD_CHANNEL_ENTERTANMENTS;
-            break;
-        case 2:
-            return KEYWORD_CHANNEL_MOVIES;
-            break;
-        case 3:
-            return KEYWORD_CHANNEL_HOTNEWS;
-            break;
-    }
-    return KEYWORD_CHANNEL_WRONGFLAG;
-
+    return KEYWORD_CHANNEL_MOVIES;
 }
--(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 0;
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+
+    QYVideoModule *pic = [self.tableSectionElementsArray objectAtIndex:indexPath.row];
+    QYVodeoDetailViewController *detailVC = [[QYVodeoDetailViewController alloc] init];
+    detailVC.picUrl = pic.playUrl;
+    [self.navigationController pushViewController:detailVC animated:YES];
+    RELEASE_SAFETY(detailVC);
+}
+#pragma mark -------Data Source Loading / Reloading Methods-----------
+//开始重新加载时调用的方法
+- (void)reloadTableViewDataSource{
+    _reloading = YES;
+    //开始刷新后执行后台线程，在此之前可以开启HUD或其他对UI进行阻塞
+    [NSThread detachNewThreadSelector:@selector(doInBackground) toTarget:self withObject:nil];
+}
+
+//完成加载时调用的方法
+- (void)doneLoadingTableViewData{
+    NSLog(@"doneLoadingTableViewData");
+    
+    _reloading = NO;
+    [_refreshTableView egoRefreshScrollViewDataSourceDidFinishedLoading:self.tableView];
+    //刷新表格内容
+    [self.tableView reloadData];
+}
+
+
+#pragma mark Background operation
+//这个方法运行于子线程中，完成获取刷新数据的操作
+-(void)doInBackground
+{
+    NSLog(@"doInBackground");
+    
+    //    NSArray *dataArray2 = [NSArray arrayWithObjects:@"Ryan2",@"Vivi2", nil];
+    //    self.array = dataArray2;
+    [NSThread sleepForTimeInterval:3];
+    
+    //后台操作线程执行完后，到主线程更新UI
+    [self performSelectorOnMainThread:@selector(doneLoadingTableViewData) withObject:nil waitUntilDone:YES];
+}
+
+
+#pragma mark EGORefreshTableHeaderDelegate Methods
+//下拉被触发调用的委托方法
+-(void)egoRefreshTableHeaderDidTriggerRefresh:(EGORefreshTableHeaderView *)view
+{
+    [self reloadTableViewDataSource];
+}
+
+//返回当前是刷新还是无刷新状态
+-(BOOL)egoRefreshTableHeaderDataSourceIsLoading:(EGORefreshTableHeaderView *)view
+{
+    return _reloading;
+}
+
+//返回刷新时间的回调方法
+-(NSDate *)egoRefreshTableHeaderDataSourceLastUpdated:(EGORefreshTableHeaderView *)view
+{
+    return [NSDate date];
+}
+
+
+#pragma mark UIScrollViewDelegate Methods
+//滚动控件的委托方法
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    [_refreshTableView egoRefreshScrollViewDidScroll:scrollView];
+}
+
+-(void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
+{
+    [_refreshTableView egoRefreshScrollViewDidEndDragging:scrollView];
 }
 
 
@@ -202,11 +265,9 @@
     [super didReceiveMemoryWarning];
 }
 -(void)dealloc{
-    
-    RELEASE_SAFETY(_tableView);
-    RELEASE_SAFETY(_sectionToChannelDictionary);
-    RELEASE_SAFETY(_tableVideosListArrayByChannel);
-    RELEASE_SAFETY(_tableSectionElementsDictionary);
+
+    RELEASE_SAFETY(_tableSectionElementsArray);
+    RELEASE_SAFETY(_imageURLArray);
     [super dealloc];
 
 }

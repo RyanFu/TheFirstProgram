@@ -100,9 +100,8 @@
 
 @interface QYVideoModule : NSObject
 
-@property (nonatomic,retain) NSString *itemCode;//视频编码
+
 @property (nonatomic,retain) NSString *title;//视频标题
-@property (nonatomic,retain) NSString *tags;//视频标签
 @property (nonatomic,retain) NSString *description;//视频秒速
 @property (nonatomic,retain) NSString *picUrl;//视频截图地址
 @property (nonatomic,retain) NSString *totalTime;//总时长
@@ -110,8 +109,10 @@
 @property (nonatomic,assign) NSInteger channelId;//所属频道id
 @property (nonatomic,retain) NSString *playUrl;//播放页Url
 @property (nonatomic,retain) NSString *bigPicUrl;//视频大图地址
-@property (nonatomic,assign) BOOL downEnable;//是否支持下载
 @property (nonatomic,assign) NSInteger commentCount;//评论次数
+@property (nonatomic,retain) NSString *tags;//视频标签
+@property (nonatomic,retain) NSString *itemCode;//视频编码
+@property (nonatomic,assign) BOOL downEnable;//是否支持下载
 
 //初始化
 - (id)initWithVideoInfos:(NSDictionary *)dictionary;

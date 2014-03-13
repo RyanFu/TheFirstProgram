@@ -48,7 +48,7 @@
 #define kTUDO_VIDEO_INFO_URL(__kItemCodes__) [NSString stringWithFormat:@"%@%@%@%@",@"http://api.tudou.com/v6/video/info?app_key=",kAppKey,@"&format=json&itemCodes=",__kItemCodes__];
 
 //视频排行榜
-#define kTUDO_VIDEO_TOPLIST_URL(__kChannelId__) [NSString stringWithFormat:@"%@%@%@%d%@",@"http://api.tudou.com/v6/video/top_list?app_key=",kAppKey,@"&format=json&channelId=",__kChannelId__,@"&pageNo=1&pageSize=5&orderBy=t"];
+#define kTUDO_VIDEO_TOPLIST_URL(__kChannelId__) [NSString stringWithFormat:@"%@%@%@%d%@",@"http://api.tudou.com/v6/video/top_list?app_key=",kAppKey,@"&format=json&channelId=",__kChannelId__,@"&pageNo=1&pageSize=20&orderBy=t"];
 
 //视频状态
 #define kTUDO_VIDEO_STATUS_URL(__kItemCodes__) [NSString stringWithFormat:@"%@%@%@%@",@"http://api.tudou.com/v6/video/status?app_key=",kAppKey,@"&format=json&itemCodes=",__kItemCodes__];
@@ -91,7 +91,7 @@ typedef enum channel{
 #define KEYWORD_CHANNEL_MUSICS @"音乐";//音乐
 #define KEYWORD_CHANNEL_PHYSICS @"体育";//体育
 #define KEYWORD_CHANNEL_UNIVERSALS @"科技";//科技
-#define KEYWORD_CHANNEL_MOVIES @"影视";//影视
+#define KEYWORD_CHANNEL_MOVIES @"电影";//影视
 #define KEYWORD_CHANNEL_RICHERS @"财富";//财富
 #define KEYWORD_CHANNEL_EDUCATOINS @"教育";//教育
 #define KEYWORD_CHANNEL_CARSMOTIONS @"汽车";//汽车
